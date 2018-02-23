@@ -1,3 +1,5 @@
+using System;
+
 namespace semaphore_proj.Models
 {
     public abstract class BaseEntity {}
@@ -10,5 +12,7 @@ namespace semaphore_proj.Models
         public string password { get; set; }
         public int semxp { get; set; }
         public int semlevel { get; set; }
+        public DateTime created { get;set; }
+        public DateTime updated { get;set; }
     }
 }
