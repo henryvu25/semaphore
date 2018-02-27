@@ -1,0 +1,12 @@
+<a href="/dashboard">Home</a>
+<h1>Type in the correct letter</h1>
+
+<form action="practice" method="post">
+    
+    <img src="~/images/@ViewBag.letter" alt="@ViewBag.letter">
+    <input type="text" name="practice" autofocus="autofocus">
+    <input type="hidden" name="match" value="@ViewBag.letter">
+    <button type="submit">></button>
+</form>
+
+<p>Semaphore XP : @ViewBag.user.semxp</p>
