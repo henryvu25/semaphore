@@ -48,7 +48,7 @@ namespace semaphore_proj.Controllers
             User currUser = _context.users.SingleOrDefault(user => user.userid == currId);
             ViewBag.user = currUser;
             Random rand = new Random();
-            ViewBag.letter = rand.Next(0,26) + ".png";
+            ViewBag.letter = rand.Next(0,26) + "let.png";
             ViewBag.result = TempData["result"];
             return View();
         }
@@ -66,7 +66,7 @@ namespace semaphore_proj.Controllers
             string letter = "";
             for(int i = 0; i < 26; i++)
             {
-                if(match == i+".png")
+                if(match == i+"let.png")
                 {
                     letter = alphabet[i].ToString();
                 }
