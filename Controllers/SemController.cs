@@ -48,8 +48,8 @@ namespace semaphore_proj.Controllers
             User currUser = _context.users.SingleOrDefault(user => user.userid == currId);
             ViewBag.user = currUser;
             Random rand = new Random();
-            string letters = "abcdefghijklmnopqrstuvwxyz";
-            ViewBag.letter = letters[rand.Next(0,26)] + ".png";
+            ViewBag.letter = rand.Next(0,26) + ".png";
+            ViewBag.result = TempData["result"];
             return View();
         }
         [HttpPost]
@@ -62,10 +62,24 @@ namespace semaphore_proj.Controllers
                 return RedirectToAction("Logout", "Home");
             }
             User currUser = _context.users.SingleOrDefault(user => user.userid == currId);
-            if(practice+".png" == match)
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";
+            string letter = "";
+            for(int i = 0; i < 26; i++)
+            {
+                if(match == i+".png")
+                {
+                    letter = alphabet[i].ToString();
+                }
+            }
+            if(practice == letter)
             {
                 currUser.semxp ++;
                 _context.SaveChanges();
+                TempData["result"] = "=D";
+            }
+            else
+            {
+                TempData["result"] = "=(";
             }
             if(currUser.semxp > 99)
             {
