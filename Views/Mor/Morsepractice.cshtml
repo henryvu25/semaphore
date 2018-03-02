@@ -1,0 +1,198 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('textarea').keypress(function () {
+            var inp = this;
+            setTimeout(function () {
+                inp.value = inp.value.replace(/z/, '.');
+                inp.value = inp.value.replace(/x/, '-');
+            }, 0);
+        });
+    })
+
+</script>
+
+<a href="/dashboard">Home</a>
+<a href="/morseintro">Morse Introduction</a>
+<h1>Welcome to Morse Drills, @ViewBag.user.first!</h1>
+<h2>MorseXP: @ViewBag.user.morxp</h2>
+
+<h1>Type the following in Morse</h1>
+<h4>You will receive MorseXP for every completed field submitted</h4>
+<h4>use . and - and separate each letter with /</h4>
+<h4>TIP: you can use z for . and x for - in the text field for convenience</h4>
+<hr>
+
+<form action="alphabet" method="post">
+    <p>A / B / C / CH / D / E / F / G / H / I / J / K / L / M / N / O / P / Q / R / S / T / U / V / W / X / Y / Z</p>
+    <textarea name="alphabet" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<h4>Special letters: Â = AA, Ă = AW, Đ = DD, Ê = EE, Ô = OO, Ơ = OW, Ư = UW </h4>
+<h4>Accents: / = S, \ = Q, ? = Z, ~ = X, . = J (remember to place the accents at the end of the word)</h4>
+<h4>Example: người = -./--./..-/.--/---/.--/../--.-</h4>
+<hr>
+
+<form action="onea" method="post">
+    <p>Thiếu Nhi mỗi sáng dâng ngày</p>
+    <textarea name="onea" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="oneb" method="post">
+    <p>Điểm tô đời sống hương bay nguyện cầu</p>
+    <textarea name="oneb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="twoa" method="post">
+    <p>Thiếu Nhi Thánh Thể nhiệm mầu</p>
+    <textarea name="twoa" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="twob" method="post">
+    <p>Tôn sùng rước lễ nhà chầu viếng thăm</p>
+    <textarea name="twob" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="threea" method="post">
+    <p>Thiếu Nhi Thánh Giá Chúa nằm</p>
+    <textarea name="threea" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="threeb" method="post">
+    <p>Nhìn lên phấn khởi chuyên cần hy sinh</p>
+    <textarea name="threeb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="foura" method="post">
+    <p>Thiếu Nhi nhờ Mẹ đinh ninh</p>
+    <textarea name="foura" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="fourb" method="post">
+    <p>Quyết làm gương sáng xứng danh tông đồ</p>
+    <textarea name="fourb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="fivea" method="post">
+    <p>Thiếu Nhi mọi việc nhỏ to</p>
+    <textarea name="fivea" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="fiveb" method="post">
+    <p>Tinh thần vâng phục chuyên lo đậm đà</p>
+    <textarea name="fiveb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="sixa" method="post">
+    <p>Thiếu Nhi đằm thắm nết na</p>
+    <textarea name="sixa" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="sixb" method="post">
+    <p>Nói năng hành động nõn nà trắng trong</p>
+    <textarea name="sixb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="sevena" method="post">
+    <p>Thiếu Nhi bác ái một lòng</p>
+    <textarea name="sevena" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="sevenb" method="post">
+    <p>Tim luôn quảng đại mới mong giúp người</p>
+    <textarea name="sevenb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="eighta" method="post">
+    <p>Thiếu Nhi ngay thẳng trọn đời</p>
+    <textarea name="eighta" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="eightb" method="post">
+    <p>Nói làm đúng mực người người tin yêu</p>
+    <textarea name="eightb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="ninea" method="post">
+    <p>Thiếu Nhi dù khó trăm chiều</p>
+    <textarea name="ninea" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="nineb" method="post">
+    <p>Chu toàn bổn phận mọi điều chăm chuyên</p>
+    <textarea name="nineb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="tena" method="post">
+    <p>Thiếu Nhi thực hiện hoa thiêng</p>
+    <textarea name="tena" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>
+
+<form action="tenb" method="post">
+    <p>Chép ghi mỗi tối cộng biên mỗi tuần</p>
+    <textarea name="tenb" cols="130" rows="1" onpaste="return false"></textarea>
+    <p>
+        <button type="submit">></button>
+    </p>
+</form>

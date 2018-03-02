@@ -1,7 +1,22 @@
+<a href="/logout">Logout</a>
 <h1>Welcome @ViewBag.user.first!</h1>
 
 <div>
-    <a href="introduction">Introduction</a>
-    <a href="practice">Practice</a>
+    <a href="introduction">Semaphore Introduction</a>
+    <a href="practice">SemaphorePractice</a>
+    <br>
+    <a href="morseintro">Morse Introduction</a>
+    <a href="morseprac">Morse Practice</a>
 </div>
 <h3>Semaphore Level: @ViewBag.user.semlevel</h3>
+<h3>Morse Level: @ViewBag.user.morlevel</h3>
+
+<h1>Leaderboard</h1>
+<ol>
+    @{ foreach(var user in @ViewBag.allUsers) {
+
+    <li>@user.first @user.last[0].
+        <img src="~/images/semaphore-flags.png" alt="flags"> @user.semlevel
+        <img src="~/images/whistle.jpg" alt="whistle"> @user.morlevel</li>
+    } }
+</ol>

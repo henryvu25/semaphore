@@ -28,6 +28,10 @@ namespace semaphore_proj.Controllers
             }
             User currUser = _context.users.SingleOrDefault(user => user.userid == currId);
             ViewBag.user = currUser;
+            
+            
+            List<User> allUsers = _context.users.OrderByDescending(user => (user.semlevel + user.morlevel)).ToList();
+            ViewBag.allUsers = allUsers;
             return View();
         }
         [HttpGet]
@@ -81,52 +85,53 @@ namespace semaphore_proj.Controllers
             {
                 TempData["result"] = "=(";
             }
+            //semaphore leveler
             if(currUser.semxp > 99)
             {
                 currUser.semlevel = 1;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 223)
+            if(currUser.semxp > 299)
             {
                 currUser.semlevel = 2;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 354)
+            if(currUser.semxp > 599)
             {
                 currUser.semlevel = 3;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 475)
+            if(currUser.semxp > 999)
             {
                 currUser.semlevel = 4;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 599)
+            if(currUser.semxp > 1499)
             {
                 currUser.semlevel = 5;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 750)
+            if(currUser.semxp > 2099)
             {
                 currUser.semlevel = 6;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 900)
+            if(currUser.semxp > 2799)
             {
                 currUser.semlevel = 7;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 1111)
+            if(currUser.semxp > 3599)
             {
                 currUser.semlevel = 8;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 1501)
+            if(currUser.semxp > 4499)
             {
                 currUser.semlevel = 9;
                 _context.SaveChanges();
             }
-            if(currUser.semxp > 2123)
+            if(currUser.semxp > 5499)
             {
                 currUser.semlevel = 10;
                 _context.SaveChanges();
